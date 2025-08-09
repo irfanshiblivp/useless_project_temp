@@ -1,0 +1,323 @@
+/* Enhanced CSS for Code Analyzer */
+:root {
+  --bg: #0f1724;              /* dark navy background */
+  --panel: #0b1220;           /* panel background */
+  --accent-1: #5b8cff;        /* primary blue */
+  --accent-2: #9b6bff;        /* secondary purple */
+  --success: #4ade80;         /* success green */
+  --warning: #fbbf24;         /* warning yellow */
+  --error: #f87171;           /* error red */
+  --muted: #9aa6bf;           /* muted text */
+  --glass: rgba(255,255,255,0.03); /* glass effect */
+  --radius: 12px;             /* border radius */
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  --transition: all 0.2s ease;
+}
+
+/* Reset and base styles */
+* { 
+  box-sizing: border-box; 
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  background: linear-gradient(180deg, var(--bg), #071022);
+  color: #e6eef8;
+  overflow: hidden;
+}
+
+/* Main application container */
+.app {
+  height: 100vh;
+  display: flex;
+  gap: 18px;
+  padding: 20px;
+  align-items: stretch;
+}
+
+/* Panel styles */
+.pane {
+  background: linear-gradient(180deg, var(--panel), rgba(255,255,255,0.02));
+  border-radius: var(--radius);
+  box-shadow: 
+    0 6px 18px rgba(9,12,20,0.6), 
+    inset 0 1px 0 rgba(255,255,255,0.02);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.pane:hover {
+  box-shadow: 
+    0 8px 24px rgba(9,12,20,0.7), 
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Layout proportions */
+.editor-pane { 
+  flex: 1 1 60%; 
+  min-width: 320px; 
+}
+
+.output-pane { 
+  flex: 1 1 40%; 
+  min-width: 280px; 
+}
+
+/* Panel headers */
+.pane-header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* Control buttons */
+.controls {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 0;
+  background: var(--glass);
+  color: var(--muted);
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(91, 140, 255, 0.3);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(91, 140, 255, 0.4);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.btn.ghost:hover {
+  border-color: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+}
+
+/* Editor area */
+.editor-wrap {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  position: relative;
+}
+
+.gutter {
+  width: 50px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.008));
+  padding: 12px 8px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+}
+
+.gutter .line {
+  padding: 2px 6px;
+  line-height: 1.5;
+  transition: var(--transition);
+}
+
+.gutter .line:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.editor {
+  flex: 1;
+  padding: 12px 16px;
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e2e8f0;
+  background: transparent;
+  outline: none;
+  border: 0;
+  resize: none;
+  transition: var(--transition);
+}
+
+.editor:focus {
+  color: #fff;
+}
+
+.editor::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* Output area */
+.output-body {
+  flex: 1;
+  padding: 16px;
+  overflow: auto;
+}
+
+.output-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, #021022, #0a1019);
+  padding: 16px;
+  color: var(--muted);
+  overflow-y: auto;
+}
+
+/* Learning video container */
+.learning-video {
+  background: linear-gradient(90deg, rgba(102, 204, 255, 0.1), rgba(155, 107, 255, 0.1));
+  border: 1px solid rgba(102, 204, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* Footer notes */
+.footer-note {
+  padding: 12px 16px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(255,255,255,0.01);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .editor-pane,
+  .output-pane {
+    min-width: 0;
+    flex: 1;
+  }
+  
+  .editor-pane {
+    order: 1;
+    max-height: 60vh;
+  }
+  
+  .output-pane {
+    order: 2;
+    max-height: 40vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .pane-header {
+    padding: 10px 12px;
+  }
+  
+  .controls {
+    gap: 6px;
+  }
+  
+  .btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .gutter {
+    width: 40px;
+    font-size: 12px;
+  }
+  
+  .editor {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Focus indicators */
+.editor:focus {
+  outline: 2px solid var(--accent-1);
+  outline-offset: -2px;
+}
+
+.btn:focus {
+  outline: 2px solid var(--accent-1);
+  outline-offset: 2px;
+}
