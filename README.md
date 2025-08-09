@@ -9,75 +9,59 @@
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Haneen shan P - college of engineering munnar
+- Member 2: Haneen shan p - college of engineering munnar
+- Member 3: Irfan shibli V P - college of engineering munnar
 
 ### Project Description
-[2-3 lines about what your project does]
+This project is an innovative online compiler that compiles code using the Google Gemini API. It provides real-time feedback by displaying Malayalam movie stickers reflecting the severity of errors, and includes a unique interactive “fix now” feature that challenges users with an impossible game before revealing error solutions.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Most compilers give boring, plain error messages that make debugging dull and frustrating. But what if errors could be fun and motivating instead? Our project solves this “non-problem” by turning error feedback into an engaging experience using Malayalam movie stickers and a quirky game — making coding enjoyable even when things go wrong!
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+Why settle for dull error messages when you can get your code reviewed by Malayalam movie stickers? We compile your code with Google Gemini API and respond with the perfect sticker mood for every error level — from chill vibes for minor glitches to drama-worthy reactions for big mistakes. And if you want to fix it? Beat our impossible dot-clicking game first! Debugging just got way more entertaining.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+Languages used: HTML, CSS, JavaScript, Node.js
+Frameworks used: Express.js (Node.js backend framework)
+Libraries used: Google Gemini API (for code compilation and analysis)
+Tools used: VS Code (or your code editor), Git (version control), Postman (API testing)
 
-### Implementation
-For Software:
-# Installation
-[commands]
+## Installation
+
+```bash
+git clone https://github.com/irfanshiblivp/compiler.git
+cd compiler
+npm install
+```
+
 
 # Run
-[commands]
+```
+npm start
+open http://localhost.com
+```
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 072817" src="https://github.com/user-attachments/assets/c22f4506-8857-4dac-ae7f-8dfe47d6acde" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+*This is the basic home page of compiler tells how it looks like when opens*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 073912" src="https://github.com/user-attachments/assets/e0d87e50-5663-4f05-8709-8d58f7e41179" />
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+*The page after compilation shows how troll shows and compilations works*
 
-For Hardware:
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 073010" src="https://github.com/user-attachments/assets/ba20a27d-718e-4b67-8545-86044270075d" />
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
+*This is the page of game which open after clicking fix now button*
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
