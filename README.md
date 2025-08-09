@@ -12,8 +12,7 @@
 
 ### Team Members
 - Team Lead: Haneen shan P - college of engineering munnar
-- Member 1: Haneen shan p - college of engineering munnar
-- Member 2: Irfan shibli V P - college of engineering munnar
+- Member: Irfan shibli V P - college of engineering munnar
 
 ### Project Description
 This project is an innovative online compiler that compiles code using the Google Gemini API. It provides real-time feedback by displaying Malayalam movie stickers reflecting the severity of errors, and includes a unique interactive “fix now” feature that challenges users with an impossible game before revealing error solutions.
