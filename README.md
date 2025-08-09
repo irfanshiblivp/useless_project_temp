@@ -36,7 +36,7 @@ Tools used: VS Code (or your code editor), Git (version control), Postman (API t
 
 ```bash
 git clone https://github.com/irfanshiblivp/compiler.git
-change api key at .env file with actual one of yours
+change api key of .env file with actual one of yours
 cd compiler
 npm install
 ```
