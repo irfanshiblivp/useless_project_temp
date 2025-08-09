@@ -1,11 +1,11 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# Thepu Studio 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Debuggers
 
 
 ### Team Members
@@ -74,9 +74,8 @@ For Software:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Haneen: collected datas and found creative and innovative ideas
+- irfan: made those innovative ideas and datas into one web application
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
