@@ -66,8 +66,9 @@ For Software:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 073912" src="https://github.com/user-attachments/assets/747bb4bd-2a66-42b8-a0a2-c179ca9220b4" />
+
+*This video shows the exact working of project.(for demonostration purpose we used low severity error code in this video)*
 
 # Additional Demos
 [Add any extra demo materials/links]
