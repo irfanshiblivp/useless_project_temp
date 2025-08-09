@@ -3,6 +3,8 @@
 
 # Thepu Studio 🎯
 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/616e57f2-21be-419e-b262-a84c48ec7998" />
+
 
 ## Basic Details
 ### Team Name: Debuggers
@@ -10,8 +12,8 @@
 
 ### Team Members
 - Team Lead: Haneen shan P - college of engineering munnar
-- Member 2: Haneen shan p - college of engineering munnar
-- Member 3: Irfan shibli V P - college of engineering munnar
+- Member 1: Haneen shan p - college of engineering munnar
+- Member 2: Irfan shibli V P - college of engineering munnar
 
 ### Project Description
 This project is an innovative online compiler that compiles code using the Google Gemini API. It provides real-time feedback by displaying Malayalam movie stickers reflecting the severity of errors, and includes a unique interactive “fix now” feature that challenges users with an impossible game before revealing error solutions.
@@ -70,8 +72,6 @@ For Software:
 
 *This video shows the exact working of project.(for demonostration purpose we used low severity error code in this video)*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 - Haneen: collected datas and found creative and innovative ideas
