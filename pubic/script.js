@@ -6,9 +6,9 @@ const CONFIG = {
   ANALYSIS_ENDPOINT: '/analyze',
   HIGH_MEDIUM_WEBPS: [
     { src: 'sma1.webp', audio: 'sma1.mp3' },
-    { src: 'sma2.webp', audio: 'https://embed.screenapp.io/app/#/shared/uL6qCXRmFJ?embed=true' } // Autoplay audio for sma2.webp
+    { src: 'sma2.webp', audio: 'nsrm.mpeg' } // Local MPEG audio for sma2.webp
   ],
-  LOW_WEBP: { src: 'sma2.webp', audio: 'https://embed.screenapp.io/app/#/shared/uL6qCXRmFJ?embed=true' },
+  LOW_WEBP: { src: 'sma2.webp', audio: 'nsrm.mpeg' }, // Also uses nsrm.mpeg
   EXCELLENT_WEBPS: [
     { src: 'ex1.webp', audio: 'ex1.mp3' },
     { src: 'ex2.webp', audio: 'ex2.mp3' },
@@ -144,7 +144,7 @@ function displayWebPInOutput(severity) {
         style="max-height: 300px; max-width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4);"
       >
     </div>
-    <audio autoplay>
+    <audio autoplay loop muted oncanplay="this.muted=false">
       <source src="${audioSrc}" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
@@ -208,13 +208,9 @@ async function analyzeCode() {
 
     const analysisData = await response.json();
 
-    // Determine severity for display
-    // We'll pick the highest severity found in issues or if no issues -> excellent
-
     let severityToShow = 'excellent';
 
     if (analysisData.issues && analysisData.issues.length > 0) {
-      // Determine highest severity present
       const severityPriority = {
         'very high': 5,
         'high': 4,
@@ -236,7 +232,7 @@ async function analyzeCode() {
       });
 
       severityToShow = maxSeverityName;
-      if (severityToShow === 'unknown') severityToShow = 'high'; // fallback
+      if (severityToShow === 'unknown') severityToShow = 'high';
     }
 
     displayWebPInOutput(severityToShow);
@@ -288,7 +284,6 @@ function initialize() {
   updateGutter();
   initializeEventListeners();
   
-  // Add keyboard shortcut for quick analysis
   document.addEventListener('keydown', (event) => {
     if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
       event.preventDefault();
@@ -297,7 +292,6 @@ function initialize() {
   });
 }
 
-// Start the application when DOM is loaded
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initialize);
 } else {
