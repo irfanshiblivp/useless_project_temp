@@ -3,16 +3,77 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Code Analyzer — Editor with Smart Analysis</title>
+  <title>Code Analyzer — Editor with Smart Analysis | ThepStudio</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .brand-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: linear-gradient(90deg, #1e1e2f, #2a2a40);
+      color: #fff;
+      font-size: 1.05rem;
+      border-bottom: 2px solid #3b3b5c;
+    }
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-left img {
+      height: 40px;
+      border-radius: 6px;
+    }
+    .brand-info {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .brand-info strong {
+      font-size: 1.15rem;
+    }
+    .brand-info small {
+      color: #ccc;
+      font-style: italic;
+    }
+    .brand-right a {
+      color: #4da6ff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid #4da6ff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .brand-right a:hover {
+      background: #4da6ff;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Professional Branding & Contribution Header -->
+  <div class="brand-header">
+    <div class="brand-left">
+      <img src="logo.jpg" alt="ThepStudio Logo">
+      <div class="brand-info">
+        <strong>ThepStudio — Code Analyzer</strong>
+        <small>Crafted with passion by Irfan & Haneen</small>
+      </div>
+    </div>
+    <div class="brand-right">
+      <a href="https://github.com/irfanshiblivp" target="_blank">GitHub</a>
+    </div>
+  </div>
+
   <div class="app">
 
     <section class="pane editor-pane" aria-label="Editor">
       <div class="pane-header">
         <div>
-          <div class="title">Code Editor</div>
+          <div class="title">Code editor</div>
           <div class="subtitle">Write your code here for analysis</div>
         </div>
         <div class="controls">
@@ -24,7 +85,6 @@
 
       <div class="editor-wrap">
         <div class="gutter" id="gutter">
-          <!-- line numbers inserted via JS for better UX; fallback static numbers if JS disabled -->
           <div class="line">1</div>
           <div class="line">2</div>
           <div class="line">3</div>
