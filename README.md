@@ -68,6 +68,9 @@ For Software:
 
 
 ### Project Demo
+
+#hosted website : https://thepustudio.onrender.com/
+
 # Video
 <img width="1920" height="1080" alt="Screenshot 2025-08-09 073912" src="https://github.com/user-attachments/assets/747bb4bd-2a66-42b8-a0a2-c179ca9220b4" />
 
