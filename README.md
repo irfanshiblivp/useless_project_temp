@@ -56,11 +56,13 @@ For Software:
 
 *This is the basic home page of compiler tells how it looks like when opens*
 
-<img width="1920" height="1080" alt="Screenshot 2025-08-09 073912" src="https://github.com/user-attachments/assets/e0d87e50-5663-4f05-8709-8d58f7e41179" />
+<img width="1919" height="1079" alt="Screenshot 2025-08-09 082244" src="https://github.com/user-attachments/assets/00ef4aa4-2610-4d8c-afb1-db474aa93aba" />
+
 
 *The page after compilation shows how troll shows and compilations works*
 
-<img width="1920" height="1080" alt="Screenshot 2025-08-09 073010" src="https://github.com/user-attachments/assets/ba20a27d-718e-4b67-8545-86044270075d" />
+<img width="1920" height="1080" alt="Screenshot 2025-08-10 184329" src="https://github.com/user-attachments/assets/b523eccd-6e24-47dc-9dcd-e26339f3834a" />
+
 
 *This is the page of game which open after clicking fix now button*
 
